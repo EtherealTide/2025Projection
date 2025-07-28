@@ -158,7 +158,7 @@ class GimbalLaserControl:
 
         return perimeter, points_count
 
-    # 修改现有的图形生成函数，使用计算出的点数
+    # 生成三角形轨迹
     def generate_triangle_points(self, x1, y1, x2, y2, x3, y3, steps=None):
         """
         生成三角形点序列
@@ -195,7 +195,7 @@ class GimbalLaserControl:
             y = (1 - t) * y3 + t * y1
             points.append((x, y))
         return points
-
+    # 生成矩形轨迹
     def generate_rectangle_points(self, x1, y1, x2, y2, steps=None):
         """
         生成矩形点序列
@@ -263,7 +263,7 @@ class GimbalLaserControl:
             points.append((x_s, y_s))
         return points
 
-    # 生成指定图形的点序列
+    # 画画和写字
     def read_point_from_file(self, file_path):
         """
         从文件中读取点序列，用于画画和写字，需要提前把指令文件放在文件系统
