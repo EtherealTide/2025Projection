@@ -266,7 +266,7 @@ class GimbalLaserControl:
     # 生成指定图形的点序列
     def read_point_from_file(self, file_path):
         """
-        从文件中读取点序列
+        从文件中读取点序列，用于画画和写字，需要提前把指令文件放在文件系统
         """
         basic_delay_time = 2.2  # 基础延时时间，单位为ms
         with open(file_path, "r") as f:
